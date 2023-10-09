@@ -1,42 +1,73 @@
 function loadPage() {
 
-    $('.textInput').removeClass('active');
+    const TI = document.querySelector('.textInput');
+    TI.classList.remove('active')
 
     $('.textInput').on('focus', function () {
-        $('.textInput').removeClass('active');
-        $(this).addClass('active');
+        TI.classList.remove('active');
+        this.classList.add('active');
     })
 
     $('.textInput').on('blur', function () {
         $('.textInput').removeClass('active');
     });
 
-    const Res = document.querySelector('#Result');
     const Btn = document.querySelector('#submitButton');
-    
+
     Btn.addEventListener('click', () => {
-        const Wgt = document.querySelector(`#Weight`).value;
-        const Hgt = document.querySelector(`#Height`).value;
+        const Wgt = Number(document.querySelector(`#Weight`).value);
+        const Hgt = Number(document.querySelector(`#Height`).value);
 
-        const IMC = (Wgt / ((Hgt/100) ** 2)).toFixed(2);
-        let IMCRes;
-
-        if(IMC < 18.5){
-            IMCRes = 'Peso Abaixo';
-        }else if(IMC >= 18,5 && IMC < 25){
-            IMCRes = 'Peso Normal';
-        }else if (IMC >= 25 && IMC < 30){
-            IMCRes = 'Sobrepeso';
-        }else if (IMC >= 30 && IMC < 35){
-            IMCRes = 'Obesidade grau I';
-        }else if (IMC >= 35 && IMC < 40){
-            IMCRes = 'Obesidade grau II';
-        }else{
-            IMCRes = 'Obesidade grau III';
+        if (!Wgt && !Hgt) {
+            msg("Ambos os valores são inválidos", 0, false)
+            return;
+        }
+        if (!Wgt) {
+            msg("Peso inválido", 0, false)
+            return;
+        }
+        if (!Hgt) {
+            msg("Altura inválida", 0, false)
+            return;
         }
 
-        Res.innerHTML = `<p> Você está com ${IMCRes} (${IMC}) </p>`
+        function IMCValue(Peso, Altura) {
+            const IMC = (Peso / ((Altura / 100) ** 2)).toFixed(2);
+            return (IMC);
+        }
+
+        function IMC(IMC) {
+
+            let nivel = ['Obesidade grau III', 'Obesidade grau II', 'Obesidade grau I', 'Sobrepeso', 'Peso Normal', 'Peso Abaixo']
+
+            if (IMC >= 40) return nivel[0]
+            if (IMC >= 35) return nivel[1]
+            if (IMC >= 30) return nivel[2]
+            if (IMC >= 25) return nivel[3]
+            if (IMC >= 18.5) return nivel[4]
+            if (IMC < 18.5) return nivel[5]
+        }
+
+
+        let ResultadoIMCValor = IMCValue(Wgt, Hgt);
+        let ResultadoIMC = IMC(ResultadoIMCValor);
+        msg(ResultadoIMC, ResultadoIMCValor, true);
     })
+
+    const p = document.createElement('p');
+    p.classList.add('pCreate');
+    const Res = document.querySelector('#Result');
+    Res.appendChild(p);
+
+    function msg(Retorno, imc, isValid) {
+        if (isValid) {
+            p.innerHTML = `Você está com ${Retorno} (${imc}).`;
+            p.style.backgroundColor = 'green';
+        } else {
+            p.innerHTML = `${Retorno}.`
+            p.style.backgroundColor = 'red';
+        }
+    }
 }
 
 loadPage();

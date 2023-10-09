@@ -144,8 +144,10 @@ fieldset legend {
     font-size: 1.5em;
 }
 
-
-/*
-    <ul class="uLists">
-    <li class="titleUl">Resultado</li>
-    */
+.pCreate {
+    font-size: 1.4em;
+    margin-top: 40px;
+    padding: 20px;
+    color: white;
+    border-radius: 20px;
+}
