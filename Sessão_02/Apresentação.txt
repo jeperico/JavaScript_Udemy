@@ -1,0 +1,2 @@
+A Sessão 2 engloba os fundamentos e conceitos básicos da linguagens, como variáveis, constantes, tipos primitivos, funções e objetos básicos.
+Essa sessão é praticamente o Hello World do curso, com seus mais de 30 módulos, englobando TypeScript, React, Node, Banco de Dados, API's, etc.
