@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC - Índice de Massa Corporal</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body onload="active()">
+    <header>
+        <h1 id="tittleHeader">IMC</h1>
+        <p id="captionHeader">Calculo</p>
+    </header>
+    <main>
+        <h1 id="tittleMain">Tabela IMC</h1>
+        <p id="textMain">
+            <div id="containerUl">
+                <ul class="uLists">
+                    <li class="titleUl">IMC</li>
+                    <li>Menor que 18,5</li>
+                    <li>18,5 a 24,9</li>
+                    <li>25 a 29,9</li>
+                    <li>30 a 34,9</li>
+                    <li>35 a 39,9</li>
+                    <li>Maior que 40</li>
+                </ul>
+                <ul class="uLists">
+                    <li class="titleUl">Resultado</li>
+                    <li>Peso Abaixo</li>
+                    <li>Peso Normal</li>
+                    <li>Sobrepeso</li>
+                    <li>Obesidade grau I</li>
+                    <li>Obesidade grau II</li>
+                    <li>Obesidade grau III</li>
+                </ul>
+            </div>
+        </p>
+        <form>
+            <fieldset>
+                <legend>Calcule seu IMC</legend>
+                <div class="containerDataForm">
+                    <label for="Weight">Peso(kg):</label>
+                    <input type="text" id="Weight" class="textInput active">
+                </div>
+                <div class="containerDataForm">
+                    <label for="Height">Altura(cm):</label>
+                    <input type="text" id="Height" class="textInput">
+                </div>
+                <input type="button" value="Enviar" id="submitButton">
+            </fieldset>
+        </form>
+        <div id="Result">
+
+        </div>
+    </main>
+    <footer>
+        <p>Curso de JavaScript da Udemy</p>
+        <p>Dia: 09/10/2023 / Hora de início: 08:54</p>
+        <p>João Eduardo Périco</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
