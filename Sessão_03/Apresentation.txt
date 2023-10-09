@@ -1,0 +1,11 @@
+
+
+Extensões do VSCode:
+
+Code Runner
+Code Time
+EJS language support
+Git Graph
+StandartJS - JavaScript Standard Style
+winter's comming
+VSCode Icons
