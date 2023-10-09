@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        body{
+            background-color: bisque;
+        }
+        .dataContainer, #usSubmit, h1{
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cadastro de Usuário</h1>
+    <form id="Form">
+        <div class="dataContainer">
+            <label for="usName">Nome:</label>
+            <input type="text" id="usName">
+        </div>
+        <div class="dataContainer">
+            <label for="usLastName">Sobrenome:</label>
+            <input type="text" id="usLastName">
+        </div>
+        <div class="dataContainer">
+            <label for="usWeight">Peso:</label>
+            <input type="text" id="usWeight">
+        </div>
+        <div class="dataContainer">
+            <label for="usHeight">Altura:</label>
+            <input type="text" id="usHeight">
+        </div>
+        <input type="button" value="Enviar" id="usSubmit">
+    </form>
+    <div id="resArea"></div>
+    <script src="./ArrayFunctionObject.js"></script>
+</body>
+
+</html>
