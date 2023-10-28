@@ -54,16 +54,16 @@ main button {
     width: 100px;
 }
 
-footer{
+footer {
     position: absolute;
     bottom: 0%;
 
     background-color: var(--color-black);
     color: var(--color-white);
-    
+
     width: 100vw;
     text-align: center;
-    
+
     display: flex;
     justify-content: space-evenly;
 }

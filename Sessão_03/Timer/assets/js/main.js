@@ -12,25 +12,25 @@ let segundos = 0;
 let timer;
 
 function startTime() {
-    timer = setInterval( () =>{
+    timer = setInterval(() => {
         segundos++;
         Timer.innerHTML = createHour(segundos);
     })
 }
 
-Span.addEventListener('click', function(e) {
+Span.addEventListener('click', function (e) {
     const ele = e.target;
 
-    if(ele.classList.contains('Iniciar')){
+    if (ele.classList.contains('Iniciar')) {
         Timer.classList.remove('pausado');
         clearInterval(timer);
         startTime();
     }
-    if(ele.classList.contains('Pausar')){
+    if (ele.classList.contains('Pausar')) {
         Timer.classList.add('pausado');
         clearInterval(timer);
     }
-    if(ele.classList.contains('Zerar')){
+    if (ele.classList.contains('Zerar')) {
         Timer.classList.remove('pausado');
         clearInterval(timer);
         Timer.innerHTML = `00:00:00`;
