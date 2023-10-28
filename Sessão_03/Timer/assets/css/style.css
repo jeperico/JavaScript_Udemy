@@ -72,3 +72,7 @@ footer p {
     font-family: monospace;
     margin: 10px 0;
 }
+
+.pausado {
+    color: var(--color-chocolate);
+}

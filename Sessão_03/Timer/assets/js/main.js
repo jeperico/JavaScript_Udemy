@@ -1,17 +1,39 @@
+function createHour(segundos) {
+    const data = new Date(segundos * 1000);
+    return data.toLocaleTimeString('pt-BR', {
+        hour12: false,
+        timeZone: 'UTC'
+    })
+}
+
 const Timer = document.querySelector('#Timer');
-const Iniciar = document.querySelector('#Iniciar');
-const Pausar = document.querySelector('#Pausar');
-const Zerar = document.querySelector('#Zerar');
-var time = (new Date(0, 0, 0)).toLocaleTimeString('pt-BR', {hour12: false});
+const Span = document.querySelector('#Buttons');
+let segundos = 0;
+let timer;
 
-Iniciar.addEventListener('click', function(){
-    setInterval(() => console.log((new Date(0, 0, 0 + 1000)).toLocaleTimeString('pt-BR', {hour12: false})), 1000);
-});
+function startTime() {
+    timer = setInterval( () =>{
+        segundos++;
+        Timer.innerHTML = createHour(segundos);
+    })
+}
 
-Pausar.addEventListener('click', function(){
+Span.addEventListener('click', function(e) {
+    const ele = e.target;
 
-});
-
-Zerar.addEventListener('click', function(){
-    return Timer.innerText = "00 : 00 : 00";
-});
+    if(ele.classList.contains('Iniciar')){
+        Timer.classList.remove('pausado');
+        clearInterval(timer);
+        startTime();
+    }
+    if(ele.classList.contains('Pausar')){
+        Timer.classList.add('pausado');
+        clearInterval(timer);
+    }
+    if(ele.classList.contains('Zerar')){
+        Timer.classList.remove('pausado');
+        clearInterval(timer);
+        Timer.innerHTML = `00:00:00`;
+        segundos = 0;
+    }
+})
