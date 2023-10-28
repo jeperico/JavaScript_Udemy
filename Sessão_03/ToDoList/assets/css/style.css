@@ -44,16 +44,16 @@ main {
     margin: auto;
 }
 
-footer{
+footer {
     position: absolute;
     bottom: 0%;
 
     background-color: var(--color-black);
     color: var(--color-white);
-    
+
     width: 100vw;
     text-align: center;
-    
+
     display: flex;
     justify-content: space-evenly;
 }
@@ -61,4 +61,13 @@ footer{
 footer p {
     font-family: monospace;
     margin: 10px 0;
+}
+
+main h1 {
+    margin-bottom: 20px;
+}
+
+.Btn {
+    margin-top: 13px;
+    margin-left: 20px
 }
