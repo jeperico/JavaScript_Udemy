@@ -1,0 +1,3 @@
+Bom, esse módulo trata sobre funções de maneira avançada
+
+First-class objects (Objetos de primeira classe)
