@@ -14,3 +14,14 @@ function somar(a = 2) {
 }
 
 somar(undefined, 2, 3, 4, 5, 6, 7, 8, 9, 10, 123423, 23432423, 234);
+
+function multiplicacao(m) {
+    return function(n) {
+        return n * m
+    }
+}
+const x2 = multiplicacao(2);
+const x3 = multiplicacao(3);
+const x4 = multiplicacao(4);
+
+console.log(x2(2), x3(2), x4(2))
