@@ -95,17 +95,14 @@ table {
     font-size: 1em;
     border: none;
     background-color: var(--color-black);
-    color: var(--color-chocolate);
     cursor: pointer;
+    color: var(--color-white);
+}
+
+.orangeColor {
+    color: var(--color-chocolate);
 }
 
 .button:hover {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
     background-color: #1d1d1d;
-}
-
-.buttonNumber {
-    color: var(--color-white);
 }
