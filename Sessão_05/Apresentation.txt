@@ -1,3 +1,5 @@
 Bom, esse módulo trata sobre Arrays de maneira avançada
 
 Vetores são Arrays de uma única dimensão
+
+Achei a Sessão muito boa, muitos conhecimentos realmente úteis e que agregaram muito 
