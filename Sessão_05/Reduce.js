@@ -1,4 +1,4 @@
-// Soma toso os elementos do Array
+// Soma todos os elementos do Array
 //
 
 const numbers = [5, 50, 80, 1, 2, 3, 5, 7, 8, 11, 15, 22, 27, 52, 8, 10.1];
