@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPF</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: beige;
+            padding: 0;
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin: 0;
+        }
+
+        #textBox {
+            width: 320px;
+            height: 30px;
+            margin: 50px;
+        }
+
+        #button {
+            width: 150px;
+            height: 50px;
+            transition: .5s;
+            border: none;
+            background-color: rgb(164, 101, 223);
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        #button:hover {
+            background-color: aqua;
+            border: none;
+            height: 75px;
+            width: 100vw;
+            border-radius: 0;
+        }
+
+        #div {
+            position: absolute;
+            top: 69%
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            position: absolute;
+            bottom: 0%;
+            width: 100vw;
+            height: 3%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes ball {
+            0% {
+               top: 0; 
+               left: 0; 
+            }
+            10% {
+               top: 10%; 
+               left: 20%; 
+            }
+            20% {
+               top: 20%; 
+               left: 50%; 
+            }
+            30% {
+               top: 40%; 
+               left: 80%; 
+            }
+            40% {
+               top: 70%; 
+               left: 20%; 
+            }
+            50% {
+               top: 20%; 
+               left: 80%; 
+            }
+            60% {
+               top: 70%; 
+               left: 20%; 
+            }
+            70% {
+               top: 50%; 
+               left: 50%; 
+            }
+            80% {
+               top: 70%; 
+               left: 20%; 
+            }
+            90% {
+               top: 20%; 
+               left: 30%; 
+            }
+            100% {
+               top: 80%; 
+               left: 90%; 
+            }
+        }
+        @keyframes ball2 {
+            0% {
+               top: 50%; 
+               left: 70%; 
+            }
+            10% {
+               top: 20%; 
+               left: 60%; 
+            }
+            20% {
+               top: 60%; 
+               left: 90%; 
+            }
+            30% {
+               top: 30%; 
+               left: 90%; 
+            }
+            40% {
+               top: 30%; 
+               left: 80%; 
+            }
+            50% {
+               top: 30%; 
+               left: 0%; 
+            }
+            60% {
+               top: 50%; 
+               left: 90%; 
+            }
+            70% {
+               top: 30%; 
+               left: 40%; 
+            }
+            80% {
+               top: 20%; 
+               left: 80%; 
+            }
+            90% {
+               top: 60%; 
+               left: 80%; 
+            }
+            100% {
+               top: 50%; 
+               left: 50%; 
+            }
+        }
+        @keyframes ball3 {
+            0% {
+               top: 30%; 
+               left: 45%; 
+            }
+            10% {
+               top: 70%; 
+               left: 40%; 
+            }
+            20% {
+               top: 40%; 
+               left: 10%; 
+            }
+            30% {
+               top: 80%; 
+               left: 60%; 
+            }
+            40% {
+               top: 80%; 
+               left: 40%; 
+            }
+            50% {
+               top: 30%; 
+               left: 10%; 
+            }
+            60% {
+               top: 80%; 
+               left: 60%; 
+            }
+            70% {
+               top: 80%; 
+               left: 0%; 
+            }
+            80% {
+               top: 40%; 
+               left: 1%; 
+            }
+            90% {
+               top: 50%; 
+               left: 50%; 
+            }
+            100% {
+               top: 80%; 
+               left: 60%; 
+            }
+        }
+
+        .ball {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            z-index: -1;
+        }
+        #ball1 {
+            background-color: brown;
+            animation: ball linear 4s infinite;
+        }
+        #ball2 {
+            background-color: rgb(165, 42, 128);
+            animation: ball2 linear 4s infinite;
+        }
+        #ball3 {
+            background-color: rgb(42, 114, 165);
+            animation: ball3 linear 4s infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Verificador de CPF válido</h1>
+    <input type="text" id="textBox" placeholder="Informe seu CPF">
+    <input type="button" value="Validar" id="button" onclick="crica()">
+    <div id="div"></div>
+    <div class="ball" id="ball1"></div>
+    <div class="ball" id="ball2"></div>
+    <div class="ball" id="ball3"></div>
+    <footer>
+        <p>Desenvolvido para fins educativos por João Eduardo Périco</p>
+    </footer>
+    <script src="ValidandoCPF.js"></script>
+</body>
+
+</html>
